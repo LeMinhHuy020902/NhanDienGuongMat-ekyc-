@@ -1,0 +1,39 @@
+CREATE DATABASE ekyc_system;
+
+
+-- 2. Bảng người dùng
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- 3. Bảng lưu face encodings (3 góc mặt)
+CREATE TABLE face_encodings (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+    face_encoding BYTEA NOT NULL,
+    angle VARCHAR(20),
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- 4. Bảng lưu voice print (nếu có nhận dạng giọng nói)
+CREATE TABLE voice_prints (
+     user_id INTEGER REFERENCES users(id),
+    voice_print BYTEA NOT NULL,
+    sample_rate INTEGER,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
+
+-- 5. Bảng ghi log KYC (xác thực)
+CREATE TABLE kyc_sessions (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+    result BOOLEAN,
+    face_score FLOAT,
+    voice_score FLOAT,
+    created_at TIMESTAMP DEFAULT NOW()
+);

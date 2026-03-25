@@ -1,0 +1,50 @@
+đổi rất nhiều!
+bỏ sử dụng google API, sử dụng Whisper offline chạy local(vì Whisper API có trả phí.)
+
+*thư viện*
+//
+torch đã có !
+pip install --upgrade openai (openai==2.7.1)
+
+chạy trong PowerShell với quyền Admin.
+choco install ffmpeg -y
+//
+
+
+
+*luồng hoạt động*
+//
+1.Dùng Whisper API (qua OpenAI) để nhận dạng giọng nói.
+
+2.Chuyển chữ thành số (ví dụ “ba không tám…” → “308706”).
+
+3.So khớp OTP → nếu đúng thì tiếp tục.
+
+4.So khớp giọng nói với mẫu đăng ký → xác minh chính chủ.
+//
+
+
+vẫn giữ Mapping để nhận diện chính xác hơn.
+
+không cần nói <xong> khi xác nhận voice.
+
+
+
+
+Thời gian (DTW): Diễn biến theo thời gian.                   //tương đồng về biến đổi thời gian
+
+Phân phối (EMD): Phân bố các giá trị đặc trưng.              //Phân bố tần suất
+
+Hướng (Cosine): Hướng của vector đặc trưng.
+
+Xu hướng (Spearman): Mối quan hệ đơn điệu.
+
+Cấu trúc (Structural): Cấu trúc vi mô (độ biến thiên).
+
+Phổ (Spectral): Đặc trưng tần số.
+
+
+
+
+
+Loại bỏ toàn bộ MFCC, DTW, Spearman, structural similarity, FFT, HNR -> sử dụng Resemblyzer embedding.

@@ -1,0 +1,55 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Virtual env ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- IDE / editor ---
+.idea/
+.vscode/
+
+# --- Secrets & local config (không đẩy mật khẩu DB lên GitHub) ---
+.env
+.env.*
+*.local
+
+# --- Models đã tải (SpeechBrain / Whisper — rất nặng, tải lại bằng pip/run) ---
+pretrained_models/
+
+# --- Whisper / torch cache (nếu có trên máy) ---
+.cache/
+whisper/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Test / coverage ---
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- File tạm / ghi chú cá nhân (bỏ dòng này nếu muốn commit) ---
+# newc.txt

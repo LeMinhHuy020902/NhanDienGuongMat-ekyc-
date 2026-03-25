@@ -1,0 +1,33 @@
+# ==========================================
+# FILE: requirements.txt
+# Mô tả: Dependencies cho hệ thống EKYC với Liveness Detection
+# ==========================================
+
+# Computer Vision & Face Recognition
+opencv-python>=4.8.0
+face-recognition>=1.3.0
+dlib>=19.24.0
+
+# Audio Processing & Voice Recognition
+SpeechRecognition>=3.10.0
+librosa>=0.10.0
+noisereduce>=3.0.0
+
+# Speaker Verification & Anti-Spoofing (ECAPA-TDNN)
+speechbrain>=0.5.14
+torch>=2.0.0
+torchaudio>=2.0.0
+
+# Machine Learning & Signal Processing
+numpy>=1.24.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+
+# Database
+psycopg2-binary>=2.9.0
+
+# Additional utilities
+PyAudio>=0.2.11
+soundfile>=0.12.0
+openai-whisper>=20231117  # For offline ASR (optional, but recommended)
+
