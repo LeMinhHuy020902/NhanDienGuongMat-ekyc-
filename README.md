@@ -261,7 +261,7 @@ sudo apt-get install portaudio19-dev python3-pyaudio
 - Đảm bảo database `ekyc_system` đã được tạo
 
 ## 👥 Tác Giả
-
+2280603117 - Trần Tuấn Thịnh 2280601153 - Lê Minh Huy 2280601948 - Nguyễn Nhật Minh
 Được phát triển cho dự án Đồ Án - Hệ Thống EKYC
 
 ## 📄 License
